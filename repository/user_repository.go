@@ -25,7 +25,7 @@ func (ur *userRepository) GetUserByEmail(user *model.User, email string) error {
 	return nil
 }
 
-func (ur *userRepository) CreateUser(user *model.User, email string) error {
+func (ur *userRepository) CreateUser(user *model.User) error {
 	if err := ur.db.Create(user).Error; err != nil {
 		return err
 	}
